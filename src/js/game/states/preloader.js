@@ -7,8 +7,16 @@ module.exports = function(game) {
     player = game.characters.dude;
     player.preload();
 
-    platformLevel = game.levels.platform;
+    platformLevel = game.maps.platform;
     platformLevel.preload();
+
+    desertTiles = game.maps.desertTiles;
+    desertLevel = game.maps.desert;
+    desertLevel.preload();
+
+    marioTiles = game.maps.marioTiles;
+    marioLevel = game.maps.mario;
+    marioLevel.preload();
 
     stars = game.elements.stars;
     stars.preload();
@@ -18,12 +26,15 @@ module.exports = function(game) {
 
     HUD = game.indicators.hud;
 
+    updating = false;
+
     Magdalene = game.music.magdalene;
     Magdalene.preload();
 
   };
 
   preloader.create = function () {
+    Magdalene.create();
     game.state.start('game');
   };
 

@@ -23,8 +23,8 @@ module.exports = function (game) {
 
 
   Stars.update = function () {
-    if (_.isObject(game.levels.platform)) {
-      this.game.physics.arcade.collide(this.stars,game.levels.platform.platforms);
+    if (_.isObject(game.maps.platform)) {
+      this.game.physics.arcade.collide(this.stars,game.maps.platform.platforms);
     }
 
     if ( this.stars.countLiving() == 0 ) {

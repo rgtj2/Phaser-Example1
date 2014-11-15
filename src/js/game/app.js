@@ -10,10 +10,17 @@ var Phaser = require('Phaser')
         { boot: require('./states/boot.js')
         , preloader: require('./states/preloader.js')
         , game: require('./states/game.js')
+        , level1: require('./states/level1.js')
+        , level2: require('./states/level2.js')
         }
 
-      , levels:
-        { platform: require('./levels/platform.js') }
+      , maps:
+        { platform: require('./maps/platform.js')
+        , desert: require('./maps/desert.js')
+        , desertTiles: require('./maps/desert_tilemap.js')
+        , mario: require('./maps/mario.js')
+        , marioTiles: require('./maps/mario_tilemap.js')
+        }
 
       , characters:
         { dude: require('./characters/dude.js') }
@@ -59,7 +66,9 @@ _.each(components, function(componentList, componentCategory) {
 var player;
 
 // Global variables for Level instances
-var platformLevel;
+var platformLevel, desertLevel, desertTiles, marioLevel, marioTiles;
+
+var Level, isDesert;
 
 // Global variables for element instances
 var stars, itvjLogo;
@@ -69,5 +78,7 @@ var HUD;
 
 // Global variables for music instances
 var Magdalene;
+
+var updating;
 
 game.state.start('boot');
