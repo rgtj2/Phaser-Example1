@@ -4,14 +4,15 @@ module.exports = function(game) {
 
   level1.create = function () {
 
-    marioLevel.create();
+    //marioLevel.create();
+    //game.stage.backgroundColor = '#000';
 
-    player.create('desert');
+    //player.create('desert');
   };
 
   level1.update = function () {
 
-    player.update('platform');
+    //player.update('platform');
 
   }
 

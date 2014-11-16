@@ -23,11 +23,15 @@ var Phaser = require('Phaser')
         }
 
       , characters:
-        { dude: require('./characters/dude.js') }
+        { dude: require('./characters/dude.js')
+        , monster: require('./characters/monster.js')
+        , propellerCar: require('./characters/propeller_car.js')
+        }
 
       , elements:
         { stars: require('./elements/stars.js') 
         , itvjLogo: require('./elements/itvj_logo.js')
+        , squirrel: require('./elements/squirrel.js')
         }
 
       , indicators:
@@ -63,7 +67,7 @@ _.each(components, function(componentList, componentCategory) {
 });
 
 // Global variables for character instances
-var player;
+var player, monster, propellerCar;
 
 // Global variables for Level instances
 var platformLevel, desertLevel, desertTiles, marioLevel, marioTiles;
@@ -71,7 +75,7 @@ var platformLevel, desertLevel, desertTiles, marioLevel, marioTiles;
 var Level, isDesert;
 
 // Global variables for element instances
-var stars, itvjLogo;
+var stars, itvjLogo, squirrel;
 
 // Global variables for indicator instances
 var HUD;

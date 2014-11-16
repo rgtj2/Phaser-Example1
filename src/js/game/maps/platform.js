@@ -20,7 +20,7 @@ module.exports = function (game) {
 
     var ledge = this.platforms.create(500,200, 'ground');
     ledge.body.immovable = true;
-    ledge = this.platforms.create(-150,100,'ground');
+    ledge = this.platforms.create(-150,200,'ground');
     ledge.body.immovable = true;
 
   };

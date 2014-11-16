@@ -4,16 +4,16 @@ module.exports = function(game) {
 
   level1.create = function () {
 
-    desertLevel.create();
+    //desertLevel.create();
 
 
-    player.create('desert');
+    //player.create('desert');
 
   };
 
   level1.update = function () {
 
-    player.update('desert');
+    //player.update('desert');
 
   }
 

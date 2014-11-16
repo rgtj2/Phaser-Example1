@@ -19,7 +19,7 @@ module.exports = function (game) {
     this.layer = this.map.createLayer('Ground');
     this.layer.resizeWorld();
 
-    setTimeout(function(){game.state.start('level2');}, 2500);
+    setTimeout(function(){game.state.start('level2');}, 15500);
 
   };
 

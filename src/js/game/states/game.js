@@ -5,24 +5,27 @@ module.exports = function(game) {
   gameState.create = function () {
 
     platformLevel.create();
-
-    itvjLogo.create();
-
+    //desertLevel.create();
+    //propellerCar.create();
+    //itvjLogo.create();
+    game.stage.backgroundColor = '#ffffff';
     HUD.create();
 
-    player.create('platform');
-
-    stars.create();
+    //player.create('platform');
+    monster.create();
+    //stars.create();
+    squirrel.create();
 
   };
 
   gameState.update = function () {
+    //propellerCar.update();
+    //player.update('platform');
+    monster.update();
+    //stars.update();
+    squirrel.update();
 
-    player.update('platform');
-
-    stars.update();
-
-    if (HUD.score == 200) { game.state.start('level1'); }
+    //if (HUD.score == 1200) { game.state.start('level1'); }
 
   }
 
