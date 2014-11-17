@@ -15,7 +15,7 @@ module.exports = function (game) {
 
   Monster.create = function (level) {
 
-    this.sprite = game.add.sprite(150,150, 'monster');
+    this.sprite = game.add.sprite(0,350, 'monster');
     this.game.physics.arcade.enable(this.sprite);
     this.sprite.body.collideWorldBounds = true;
     this.sprite.frame = 1;
@@ -82,16 +82,19 @@ module.exports = function (game) {
     HUD.score += 10;
     HUD.scoreText.text = 'Score: ' + HUD.score;
 
-    if (game.elements.stars.stars.countLiving() == 0) {
-      this.tween.to( {x: 0, y: 375},1000);
-      this.tween.start();
-    };
   }
 
   function killSquirrel (dude,squirrel) {
     squirrel.kill();
     HUD.score += 50;
     HUD.scoreText.text = 'Score: ' + HUD.score;
+
+    //
+    if (game.elements.squirrel.sprite.countLiving() == 0) {
+      this.tween.to( {x: 0, y: 375},50);
+      this.tween.start();
+    };
+
   }
 
   return Monster;
